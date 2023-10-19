@@ -44,6 +44,15 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            int bb = 7;
+            double bp = 10.7;
+            bool bi = false;
+            Console.WriteLine(bb + bp);
+            Console.ReadLine();
+
+
+
+
 
         }
     }
