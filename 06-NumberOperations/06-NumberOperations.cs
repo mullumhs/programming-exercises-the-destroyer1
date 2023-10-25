@@ -51,8 +51,16 @@ namespace ProgrammingExercisesIST
             // How to input a number from the user and store it in a variable 'x'
             Console.WriteLine("Please enter a number for X:");
             double x = Convert.ToDouble(Console.ReadLine());
-
+            
             // Your code goes below here
+            Console.WriteLine("Please enter a number for y:");
+            double y = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"{x} plus {y} = {x + y}");
+            Console.WriteLine($"{x} times {y} = {x * y}");          
+            Console.WriteLine($"{x} minus {y} = {x - y}");
+            Console.WriteLine($"{x} divided by {y} = {x / y}");
+            Console.ReadLine();
 
         }
     }
@@ -62,7 +70,26 @@ namespace ProgrammingExercisesIST
 ===============================================================================
 FEEDBACK AREA: Paste your AI feedback here before submission:
 ===============================================================================
+Feedback on your C# Programming Task:
 
+Code:
+
+Your code is well-structured and follows the task instructions accurately. You have successfully implemented the arithmetic operations and used the Convert.ToDouble() method correctly to obtain user input.
+Code Commenting:
+
+Your comments are clear and relevant, providing useful information about the code's functionality. However, there are no comments in the main body of your code. Adding comments to your code can make it easier for others (and yourself in the future) to understand what your code is doing.
+Answers to Questions:
+
+You didn't provide answers to the questions in your code. Remember to include these in your submission next time.
+Extension Tasks:
+
+You've successfully modified the program to work with the 'double' type as per the first extension task.
+The second extension task is missing, which was to research and implement the modulus operator. Please ensure to complete all extension tasks in the future.
+Suggestions for Improvement:
+
+For the division operation, consider handling the case where 'y' might be zero. Division by zero is undefined and will result in a runtime error.
+It would be good to add error handling to your code. For example, you could use a try-catch block to handle any potential exceptions that might occur when converting the user input to a double.
+Keep up the good work and continue practicing to further improve your coding skills!
 
 
 ===============================================================================
