@@ -14,8 +14,8 @@ Main Tasks:
 2. Wait for input before ending the program.
 
 Questions:
-1. What does the < symbol mean?
-2. What does selection mean?
+1. What does the < symbol mean? smaller then
+2. What does selection mean? selecting between the if/else if statements
 3. Which part executes if the condition is false (the 'if' part or 'else' part)?
 
 Extension Tasks:
@@ -50,10 +50,38 @@ namespace ProgrammingExercisesIST
         {
             // Variables and Input
             Console.Write("Please enter a mark out of 100: ");
-            int mark = Convert.ToInt32(Console.ReadLine());
+            float mark = Convert.ToInt32(Console.ReadLine());
 
             // Your code goes below here
+            
+            
+            if (mark > 100)
+            {
+                Console.WriteLine("lies");
+            }
+            else if (mark < 0)
+            {
+                Console.WriteLine("get smarter");
+            }
+            else if (mark == 100)
+            {
+                Console.WriteLine("good job");
+            }
+            else if (mark == 0)
+            {
+                Console.WriteLine("do better");
+            }
+            else if (mark < 50) 
+            {
+                Console.WriteLine("Fail");
+            }
+           else if (mark >= 50)
+            {
+                Console.WriteLine("Pass");
 
+            }
+            
+            Console.ReadLine();
         }
     }
 }
