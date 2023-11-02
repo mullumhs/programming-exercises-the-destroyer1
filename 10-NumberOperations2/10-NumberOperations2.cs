@@ -53,12 +53,33 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            Console.WriteLine("Please enter a number for X:");
+            double X = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine("Please enter a number for Y:");
+            double Y = Convert.ToDouble(Console.ReadLine());
+            
+            Console.WriteLine("What would you like to do:");
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtration");
+
+            string opperation = Console.ReadLine();
+
+            if (opperation == "1")
+            {
+                Console.WriteLine($"{X} plus {Y} = {X + Y}");
+            }
+            else if (opperation == "2")
+            {
+                Console.WriteLine($"{X} minus {Y} = {X - Y}");
+            }
 
             // Wait for any key before exiting
             Console.WriteLine();
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
+
+
         }
     }
 }

@@ -1,11 +1,7 @@
 ﻿using System;
 
 /*
-===============================================================================
-PROJECT 11: AREA CALCULATOR
-===============================================================================
-Objective:
-- Enhance understanding of selection, user input, and maths operations by calculating areas of different shapes based on user choices.
+=========selection, user input, and maths operations by calculating areas of different shapes based on user choices.
 
 Main Tasks:
 1. Create a menu that asks the user to choose between calculating the area of a rectangle or triangle.
@@ -50,7 +46,52 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            Console.WriteLine("Choose an Option:");
+            Console.WriteLine("1. Area of Circle");
+            Console.WriteLine("2. Area of Rectangle");
+            Console.WriteLine("3. Area of Triangle");
+            Console.WriteLine();    
+            string choice = Console.ReadLine();
 
+            if (choice == "2")
+            {
+                Console.WriteLine("Enter Height: ");
+                double Height = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Enter Width: ");
+                double Width = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine();
+
+                Console.WriteLine($"The area of the rectangle is {Height * Width} ");
+
+                Console.ReadLine();
+                
+            }
+
+
+            else if (choice == "1")
+            {
+                Console.WriteLine("Enter Radius: ");
+                double Radius = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine();
+
+                double circle = Math.PI * Math.Pow(Radius, 2);
+                Console.WriteLine($"The area of the circle is {circle}");
+                Console.ReadLine();
+            }
+            else if (choice == "3")
+            {
+                Console.WriteLine("Enter Height: ");
+                double Height = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Enter Base: ");
+                double Base = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine();
+
+                Console.WriteLine($"The area of the triangle is {(Height * Base)/2} ");
+
+                Console.ReadLine();
+            }
         }
     }
 }

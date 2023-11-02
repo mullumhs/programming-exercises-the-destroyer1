@@ -41,18 +41,81 @@ Additional Resources:
 - Methods: https://www.w3schools.com/cs/cs_methods.php
 ===============================================================================
 */
-
 namespace ProgrammingExercisesIST
 {
-    class Project_12_BetterAreaCalculator
+    class Project_11_AreaCalculator
     {
         static void Main(string[] args)
         {
             // Your code goes below here
+            ShowMenu();
+
+            string choice = Console.ReadLine();
+
+            if (choice == "2")
+            {
+                CalculateRectangle();
+            }
+
+
+            else if (choice == "1")
+            {
+                CalculateCircle();
+            }
+            else if (choice == "3")
+            {
+                CalculateTriangle();
+            }
+        }
+
+        static void ShowMenu()
+        {
+            Console.WriteLine("Choose an Option:");
+            Console.WriteLine("1. Area of Circle");
+            Console.WriteLine("2. Area of Rectangle");
+            Console.WriteLine("3. Area of Triangle");
+            Console.WriteLine();
+        }
+
+        static void CalculateCircle()
+        {
+            Console.WriteLine("Enter Radius: ");
+            double Radius = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            double circle = Math.PI * Math.Pow(Radius, 2);
+            Console.WriteLine($"The area of the circle is {circle}");
+            Console.ReadLine();
+        }
+
+        static void CalculateRectangle()
+        {
+            Console.WriteLine("Enter Height: ");
+            double Height = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter Width: ");
+            double Width = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine($"The area of the rectangle is {Height * Width} ");
+
+            Console.ReadLine();
 
         }
-    }
-}
+
+        static void CalculateTriangle()
+        {
+            Console.WriteLine("Enter Height: ");
+            double Height = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter Base: ");
+            double Base = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine($"The area of the triangle is {(Height * Base) / 2} ");
+
+            Console.ReadLine();
+        }
 
 /*
 ===============================================================================
