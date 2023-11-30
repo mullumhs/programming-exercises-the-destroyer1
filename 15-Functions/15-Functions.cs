@@ -63,35 +63,21 @@ namespace ProgrammingExercisesIST
     {
         static void Main(string[] args)
         {
-            // Get two numbers from the user
-            int x = GetNumber();
-            int y = GetNumber();
 
-            // Write your code here
-
-            
-
-            // "Exit" method is called here
-            Exit();
+            Console.WriteLine("enter Number 1");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter Number 2");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            MultiplyNumbers(num1, num2);
+            Console.ReadLine();
         }
 
-        // Create your functions here
-
-
-
-        // This is a function I have written to get a number from the user
-        private static int GetNumber()
+        
+        private static void MultiplyNumbers(double num1, double num2)
         {
-            Console.Write("Enter number: ");
-            return int.Parse(Console.ReadLine());
-        }
-
-        // This is a method used to wait for any key to be pressed
-        private static void Exit()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            double answer = num1 * num2;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{num1} x {num2} equals {answer}");
         }
     }
 }

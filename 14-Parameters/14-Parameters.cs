@@ -46,11 +46,31 @@ namespace ProgrammingExercisesIST
     {
         static void Main(string[] args)
         {
-            // Call the methods here, passing in the required arguments
-
+           
+            Console.WriteLine("enter Number 1");
+            double num1  = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter Number 2");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("What's your name");
+            string name = Console.ReadLine();
+            SayHello(name);
+            SubtractNumbers(num1, num2);
+            Console.ReadLine();
         }
 
-        // Write your methods including parameters here
+        static void SayHello(string name)
+        {
+            Console.WriteLine($"Hello {name}");
+            Console.ReadLine();
+        }
+        private static void SubtractNumbers(double num1, double num2)
+        {
+            double answer = num1 - num2;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{num1} - {num2} equals {answer}");
+        }
+
+        
 
     }
 }

@@ -71,11 +71,87 @@ namespace ProgrammingExercisesIST
     {
         static void Main(string[] args)
         {
-            // Write your code here
+            // Runs the menu and stores the choice
+            string choice = MainMenu();
 
+
+            // Write your code here
+            if (choice == "1")
+            {
+                ConvertA();
+            }
+
+            else if (choice == "2")
+            {
+                ConvertB();
+            }
+
+            // Wait for key press before exiting
+            WaitForKeyPress();
+        }
+
+        // Create your functions here
+
+
+
+        // Asks the user to enter a distance in the unit specified
+        
+
+
+        // Shows the menu options to the user
+        private static string MainMenu()
+        {
+
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("1. Celsius to Fahrenheit");
+            Console.WriteLine("2. Fahrenheit to Celsius");
+            string choice = Console.ReadLine();
+            return choice;
+
+
+        }
+        private static void ConvertA()
+        {
+            Console.WriteLine(" Enter degrees in Celsius to convert: ");
+            double Distance = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            double length = (Distance * 1.8 + (32));
+            Console.WriteLine($"The degrees in Fahrenheit is {length}");
+        }
+
+        private static void ConvertB()
+        {
+            Console.WriteLine(" Enter degrees in Fahrenheit to convert: ");
+            double Distance = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            double length = (Distance -32) * 5 / 9;
+            Console.WriteLine($"The degrees in Celsius is {length}");
+
+        }
+
+
+
+
+        // Waits for the user to press any key
+        private static void WaitForKeyPress()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+
+        // Displays an error message in red text
+        private static void ErrorMessage(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(message);
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
+
 
 /*
 ===============================================================================

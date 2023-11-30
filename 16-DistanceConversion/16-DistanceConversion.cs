@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 /*
 ===============================================================================
@@ -49,8 +50,17 @@ namespace ProgrammingExercisesIST
             // Runs the menu and stores the choice
             string choice = MainMenu();
 
-            // Write your code here
 
+            // Write your code here
+            if (choice == "1")
+            {
+                ConvertA();
+            }
+
+            else if (choice == "2")
+            {
+                ConvertB();
+            }
 
             // Wait for key press before exiting
             WaitForKeyPress();
@@ -71,13 +81,38 @@ namespace ProgrammingExercisesIST
         // Shows the menu options to the user
         private static string MainMenu()
         {
-            Console.Clear();
+            
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("1. Kilometres to Miles");
             Console.WriteLine("2. Miles to Kilometres");
             string choice = Console.ReadLine();
             return choice;
+
+
         }
+        private static void ConvertA()
+        {
+            Console.WriteLine(" Enter distance in Km to convert: ");
+            double Distance = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            double length = (Distance * 0.621371);
+            Console.WriteLine($"The Distance in miles is {length}");
+        }
+
+        private static void ConvertB()
+        {
+            Console.WriteLine(" Enter distance in Miles to convert: ");
+            double Distance = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+
+            double length = (Distance * 1.609343);
+            Console.WriteLine($"The Distance in KM is {length}");
+            
+        }
+
+
+
 
         // Waits for the user to press any key
         private static void WaitForKeyPress()
